@@ -17,7 +17,6 @@ class SrealitySpider(scrapy.Spider):
             ))
 
     async def parse(self, response):
-        counter = 0
         for item in response.css("div.property"):
             title = item.css('span.name.ng-binding::text').get()
             image_url = item.css('img::attr(src)').get()
@@ -25,10 +24,6 @@ class SrealitySpider(scrapy.Spider):
             sreality_item = SrealityItem()
             sreality_item["title"] = title
             sreality_item["image_url"] = image_url
-
-            counter += 1
-            if counter > 1000000:
-                break
 
             yield sreality_item
 
