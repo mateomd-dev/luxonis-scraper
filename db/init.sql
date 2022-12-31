@@ -1,0 +1,3 @@
+CREATE USER admin;
+CREATE DATABASE sreality;
+GRANT ALL PRIVILEGES ON DATABASE sreality TO admin;
