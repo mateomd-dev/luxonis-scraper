@@ -1,7 +1,7 @@
 # luxonis-scraper
 
 ## Instructions
-Simply cloning the repository and running ``docker-compose up`` should the trick - the result is then available on localhost:8080.
+Simply cloning the repository and running ``docker-compose up`` should do the trick - the result is then available on localhost:8080.
 
 ### Some issues
 - Sometimes, despite the scraper's database dependency, the scraper runs before the database is set up. If that's the case, just run the ``docker-compose up`` command again.
